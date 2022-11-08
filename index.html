@@ -15,7 +15,13 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+        <div> 
+            <!-- ci assicuriamo che arrivi a 10 e non di più -->
+            <ul v-if="mails.length === 10">
+                <!-- stampa nell'array -->
+                <li v-for="(mail, i) in mails" >{{mails[i]}}</li>
+            </ul>  
+        </div>
     </div>
     
     <script src="./js/script.js"></script>
